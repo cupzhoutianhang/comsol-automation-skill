@@ -212,7 +212,7 @@ This project is licensed under the MIT License - see the `LICENSE` file for deta
 
 ## 🙏 Acknowledgments
 
-This skill was developed by extending the [skill-creator](https://github.com/anthropic/skills) framework and inspired by your original `comsol.py` batch processing workflow.
+
 
 ---
 
