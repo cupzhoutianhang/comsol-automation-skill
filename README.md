@@ -22,7 +22,7 @@
 1. **Download the skill package**
    ```bash
    # Clone this repository
-   git clone https://github.com/yourusername/comsol-automation-skill.git
+   git clone https://github.com/cupzhoutianhang/comsol-automation-skill.git
    cd comsol-automation-skill
    
    # Install COMSOL Automation Skill
@@ -207,8 +207,8 @@ This project is licensed under the MIT License - see the `LICENSE` file for deta
 
 - 📧 Email: zhouth@cup.edu.cn
 - 🏫 Institution: China University of Petroleum (Beijing)
-- 🐛 Issues: [GitHub Issues](https://github.com/yourusername/comsol-automation-skill/issues)
-- 💬 Discussions: [GitHub Discussions](https://github.com/yourusername/comsol-automation-skill/discussions)
+- 🐛 Issues: [GitHub Issues](https://github.com/cupzhoutianhang/comsol-automation-skill/issues)
+- 💬 Discussions: [GitHub Discussions](https://github.com/cupzhoutianhang/comsol-automation-skill/discussions)
 
 ## 🙏 Acknowledgments
 
@@ -221,7 +221,7 @@ This skill was developed by extending the [skill-creator](https://github.com/ant
 **Developed by Zhou Tianhang, China University of Petroleum (Beijing)**
 
 ```bash
-git clone https://github.com/yourusername/comsol-automation-skill.git
+git clone https://github.com/cupzhoutianhang/comsol-automation-skill.git
 cd comsol-automation-skill
 skills install comsol-automated-modeling.skill
 ```
