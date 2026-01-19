@@ -118,7 +118,7 @@ python3 scripts/simulation_runner.py summary results
 }
 ```
 
-### Example 3: Your Original 868-File Workflow
+### Example 3: Your Workflow
 🔍 See: `examples/comsol_py_replacement.json`
 
 ## 🛠️ Core Scripts
