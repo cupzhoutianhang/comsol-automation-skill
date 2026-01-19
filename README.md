@@ -49,7 +49,7 @@
 
 ## 🚀 Quick Start
 
-### Basic Usage: 868 File Batch Generation
+### Basic Usage: Batch Generation
 
 This replicates your original `comsol.py` functionality:
 
