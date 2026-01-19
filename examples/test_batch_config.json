@@ -1,0 +1,33 @@
+{
+  "model_name": "test_batch",
+  "template_model": "/Users/zhoutianhang/COMSOL/不同叉指流道结构  1.8.  1.6  .11.mph",
+  "output_directory": "/Users/zhoutianhang/COMSOL/skill_batch_output",
+  "physics": ["fluid_flow"],
+  "units_system": "metric",
+  "parameters": {
+    "K_ch": [1.0, 1.2, 1.4],
+    "W_ch": [1.0, 1.2, 1.4],
+    "W_rib": [2, 3, 4]
+  },
+  "parameter_units": {
+    "K_ch": "mm",
+    "W_ch": "mm",
+    "W_rib": "mm"
+  },
+  "batch_filtering": {
+    "target_count": 5
+  },
+  "mesh_settings": {
+    "stream_interior_mesh_size": "K_ch/5"
+  },
+  "file_naming": {
+    "format": "test_Kch_{K_ch}_Wch_{W_ch}_Wrib_{W_rib}",
+    "extension": ".mph"
+  },
+  "execution_settings": {
+    "log_level": "INFO"
+  },
+  "post_processing": {
+    "verify_output": true
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "model_name": "parameter_sweep_demo",
+  "template_file": "/Users/zhoutianhang/COMSOL/templates/parameter_sweep_template.mph",
+  "output_directory": "/Users/zhoutianhang/COMSOL/parameter_sweep_output",
+  "create_directory": true,
+  "api_type": "python",
+  "geometry": {
+    "type": "parameterized_geometry",
+    "dimensions": "2D",
+    "parameters": {
+      "length": {
+        "min": 0.01,
+        "max": 0.1,
+        "step": 0.01,
+        "unit": "m"
+      },
+      "width": {
+        "min": 0.005,
+        "max": 0.05,
+        "step": 0.005,
+        "unit": "m"
+      },
+      "thickness": {
+        "values": [0.001, 0.002, 0.005],
+        "unit": "m"
+      }
+    }
+  },
+  "physics": {
+    "modules": ["HeatTransfer", "Electrostatics"],
+    "boundary_conditions": {
+      "temperature": {
+        "type": "fixed",
+        "value": 300,
+        "unit": "K"
+      },
+      "voltage": {
+        "type": "fixed",
+        "value": 10,
+        "unit": "V"
+      }
+    }
+  },
+  "mesh": {
+    "type": "adaptive",
+    "element_size": "fine",
+    "refinement_level": 2
+  },
+  "solver": {
+    "type": "stationary",
+    "tolerance": 1e-6,
+    "max_iterations": 100
+  },
+  "parameter_sweep": {
+    "enabled": true,
+    "parameters": ["length", "width", "thickness"],
+    "output_type": "all_combinations",
+    "filter_conditions": null
+  },
+  "results": {
+    "export_format": "csv",
+    "variables": ["temperature", "voltage", "heat_flux"],
+    "post_processing": {
+      "compute_statistics": true,
+      "generate_plots": true,
+      "create_report": true
+    }
+  },
+  "batch_settings": {
+    "max_concurrent": 4,
+    "timeout": 3600,
+    "retry_failed": true,
+    "retry_attempts": 3
+  },
+  "file_naming": {
+    "pattern": "sweep_model_L${length}_W${width}_T${thickness}",
+    "include_timestamp": false,
+    "include_parameters": true
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "parameter_sweep.log",
+    "console_output": true
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "model_name": "interdigitated_flow_batch",
+  "template_model": "/Users/zhoutianhang/COMSOL/不同叉指流道结构  1.8.  1.6  .11.mph",
+  "output_directory": "/Users/zhoutianhang/COMSOL/skill_batch_output",
+  "physics": ["fluid_flow"],
+  "units_system": "metric",
+  "parameters": {
+    "K_ch": [1.0, 1.2, 1.4, 1.6, 1.8, 2.0, 2.2, 2.4, 2.6, 2.8],
+    "W_ch": [1.0, 1.2, 1.4, 1.6, 1.8, 2.0, 2.2, 2.4, 2.6, 2.8], 
+    "W_rib": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+  },
+  "parameter_units": {
+    "K_ch": "mm",
+    "W_ch": "mm",
+    "W_rib": "mm"
+  },
+  "batch_filtering": {
+    "exclude_condition": {
+      "K_ch": {"operator": ">", "value": 2.4},
+      "W_ch": {"operator": ">", "value": 2.4},
+      "W_rib": {"operator": ">", "value": 9}
+    },
+    "sample_rate": 0.5,
+    "target_count": 868
+  },
+  "mesh_settings": {
+    "stream_interior_mesh_size": "K_ch/5",
+    "adaptive_refinement": true,
+    "quality_check": true
+  },
+  "file_naming": {
+    "format": "batch_model_Kch_{K_ch}_Wch_{W_ch}_Wrib_{W_rib}",
+    "extension": ".mph",
+    "zero_padding": 3
+  },
+  "execution_settings": {
+    "parallel_processing": false,
+    "max_concurrent_models": 1,
+    "error_tolerance": "continue",
+    "log_level": "INFO"
+  },
+  "post_processing": {
+    "verify_output": true,
+    "generate_summary": true,
+    "create_report": true
+  }
+}

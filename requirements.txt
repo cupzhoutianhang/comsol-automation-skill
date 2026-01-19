@@ -1,0 +1,32 @@
+# COMSOL Automation Dependencies
+
+# Core COMSOL Python API
+mph>=1.0.0
+
+# Scientific Computing
+numpy>=1.21.0
+pandas>=1.3.0
+scipy>=1.7.0
+matplotlib>=3.4.0
+
+# Configuration and Data Handling
+PyYAML>=6.0
+jsonschema>=4.0.0
+
+# File and System Operations
+tqdm>=4.62.0
+pathlib2>=2.3.6
+
+# Development and Testing
+pytest>=7.0.0
+pytest-cov>=3.0.0
+black>=22.0.0
+flake8>=4.0.0
+
+# Documentation
+Sphinx>=4.0.0
+sphinx-rtd-theme>=1.0.0
+
+# Utilities
+click>=8.0.0
+jinja2>=3.0.0
